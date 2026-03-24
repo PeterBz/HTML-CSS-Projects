@@ -1,0 +1,110 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Grund-Reset für den Header */
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Logo links, Nav rechts */
+    align-items: center;           /* Vertikal mittig */
+    padding: 20px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sanfter Schatten */
+    position: sticky;              /* Bleibt beim Scrollen oben kleben */
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header2{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px 5%;
+    background-color: #ffffffcc;
+    box-shadow:  0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index:1000
+}
+
+.logo2{
+    font-size:24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2c3e50;
+}
+
+.logo2 span{
+    color: #f39c12;
+}
+
+.nav-links2{
+    display:flex;
+    list-style:none;
+    gap: 20px;
+}
+
+.nav-links2 li a{
+    text-decoration:none;
+    color: #34495e;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links2 li a:hover{
+    color: #f39c12;
+}
+
+.btn-faq2{
+    background-color: #f39c12;
+    color: white !important;
+    border-radius: 18px;
+    padding: 8px 15px;
+}
+   
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f39c12; /* Sand-Orange für den Akzent */
+}
+
+/* Die Liste der Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Perfekter Abstand zwischen den Punkten */
+}
+
+/* Die Links selbst */
+.nav-links a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Weicher Übergang beim Drüberfahren */
+}
+
+.nav-links a:hover {
+    color: #f39c12; /* Wechselt zu Orange */
+}
+
+/* FAQ Button-Style (Spezial-Link) */
+.btn-faq {
+    background-color: #f39c12; /* Sand-Orange */
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.btn-faq:hover {
+    background-color: #f39c12cc;
+}
