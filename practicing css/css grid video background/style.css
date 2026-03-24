@@ -4,10 +4,15 @@ html, .body{
     height: 100%;
 }
 
+header{
+    height: 100vh; /* Makes the header take up the full viewport height */
+    display: grid; /* Uses CSS Grid to position the content */
+    grid-template-areas: "stack";
+    place-items: center;
+}
+
 header video {
-    position: absolute; /* Positions the video so that it can be placed behind the content */
-    top: 0; /* Aligns the video to the top of the page */
-    left: 0;
+        grid-area: stack; /* Places the content in the same grid area as the video */
 
     width: 100%; /* Makes the video take up the full width of the page */
     height: 100%; /* Makes the video take up the full height of the page */
@@ -16,6 +21,19 @@ header video {
 }
 
 header .content{ 
+    grid-area: stack; /* Places the content in the same grid area as the video */
+    font-family: Arial, sans-serif;
     z-index:1;
     color: white;
+    width: min(30rem,100%); /* Sets a maximum width for the content and allows it to shrink on smaller screens */
+    padding: 2rem;
+}
+
+button{
+    color: white;
+    background-color: rgb(139, 0, 204);
+    border-radius: 5px; 
+    font-size: medium;
+    padding:  10px 20px;
+    border: none;
 }
