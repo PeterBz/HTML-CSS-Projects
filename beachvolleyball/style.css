@@ -16,7 +16,6 @@ p {
   font-weight: 600;
 }
 
-/* Grund-Reset für den Header */
 .main-header {
   display: flex;
   justify-content: space-between; /* Logo links, Nav rechts */
@@ -31,7 +30,7 @@ p {
 
 /* Logo Styling */
 .logo {
-    display: flex;
+  display: flex;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -50,7 +49,7 @@ p {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px; /* Perfekter Abstand zwischen den Punkten */
+  gap: 40px; 
   position: sticky;
 }
 
@@ -63,30 +62,28 @@ p {
 }
 
 .nav-links a:hover {
-  color: #f39c12; /* Wechselt zu Orange */
+  color: #f39c12; 
 }
 
-/* FAQ Button-Style (Spezial-Link) */
+
 .btn-faq {
-  background-color: #f39c12; /* Sand-Orange */
+  background-color: #f39c12; 
   color: white !important;
   padding: 8px 15px;
   border-radius: 20px;
 }
 
 .btn-faq:hover {
-  /* background-color: #f39c12cc; */
   background-color: #ffd200;
 }
 
-.intro {
-  height: 100vh; /* Makes the header take up the full viewport height */
+.headline {
   display: grid; /* Uses CSS Grid to position the content */
   grid-template-areas: "stack";
   place-items: center;
 }
 
-.intro img {
+.headline img {
   grid-area: stack;
   width: 100%;
   height: 400px;
@@ -95,9 +92,71 @@ p {
   z-index: -1;
 }
 
-.intro-content {
+.headline-content {
   grid-area: stack;
   z-index: 1;
   color: white;
   font-size: 3.5rem;
+  font-style: italic;
+}
+
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  /* Wir definieren das Layout für große Bildschirme: 4 Spalten */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "box-1 box-1 box-2 box-2";
+
+  align-items: center; /* Zentriert den Text vertikal, falls eine Box mehr Text hat als die andere */
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* WICHTIG: Deine Boxen brauchen im CSS keine extra Zuweisung mehr, 
+   da du das grid-area schon im HTML (Inline-Style) erledigt hast! */
+
+/* Media Query für Handys */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "box-1"
+      "box-2";
+    grid-template-columns: 1fr;
+  }
+}
+
+.box span {
+  display: block; 
+  text-transform: uppercase;
+  color: #f39c12; 
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.box {
+  text-align: center;
+}
+
+.box p {
+  color: #34495ecc;
+}
+
+/* ÖFFENTLICHE UND PRIVATPLÄTZE */
+
+.court-grid{
+    display: grid;
+    /* 3 gleichgrosse Spalten */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.court-card{
+   background: white;
+    border-radius: 15px;
+    overflow: hidden; /* Damit das Bild an den Ecken nicht übersteht */
+    object-fit: contain;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }

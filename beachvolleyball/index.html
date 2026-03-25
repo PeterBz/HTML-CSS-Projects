@@ -1,5 +1,6 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -7,78 +8,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
 
-  <body>
+        <!-- Loads an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
     <header class="main-header">
-      <div class="logo">Beach<span>Berlin</span></div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#spots">Plätze</a></li>
-          <li><a href="#uni">Uni-Sport</a></li>
-          <li><a href="#community">Community</a></li>
-          <li><a href="#turniere">Turniere</a></li>
-          <li><a href="#faq" class="btn-faq">FAQ</a></li>
-        </ul>
-      </nav>
+        <div class="logo">Beach<span>Berlin</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#spots">Plätze</a></li>
+                <li><a href="#uni">Uni-Sport</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#turniere">Turniere</a></li>
+                <li><a href="#faq" class="btn-faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
     </header>
 
-    <section class="intro">
-      <img
-        src="pics/corey-agopian-5y4ljzRrDFA-unsplash.jpg"
-        alt="Palmen im Sonnenuntergang"
-      />
-      <p class="intro-content">
-        <span>Dein Spiel. Dein Sand. Dein Berlin.</span>
-      </p>
+    <section class="headline">
+        <img src="pics/corey-agopian-5y4ljzRrDFA-unsplash.jpg" alt="Palmen im Sonnenuntergang" />
+        <p class="headline-content">
+            <span>Dein Spiel. Dein Sand. Dein Berlin.</span>
+        </p>
     </section>
 
-    <section>
-      <div>
-        <div>
-          <h1>Willkommen beim Beachvolleyball</h1>
-          <p></p>
-        </div>
 
-        <div>
-          <p>
-            Finde die besten Courts der Stadt, entdecke Uni-Sport-Angebote und
-            werde Teil der Berliner Volleyball-Community. Von entspannten Runden
-            im Park bis hin zu kompetitiven Turnieren – wir liefern dir alle
-            Infos für dein perfektes Match.
-          </p>
+    <section class="intro">
+        <div class="grid-container">
+            <div class="box" style="grid-area: box-1">
+                <p><span>Alles was du für deinen Start wissen musst </span> </p>
+                <h1>Willkommen beim Beachvolleyball</h1>
+            </div>
+
+            <div class="box" style="grid-area: box-2">
+                <p>
+                    Wir zeigen dir, wo du kostenlos zocken kannst und welche
+                    kommerziellen Anlagen wie BeachMitte oder East61 die besten Courts der Stadt bieten. Du willst dein
+                    Spiel verbessern? Entdecke die vielfältigen Uni-Sport-Angebote der Berliner Hochschulen und erfahre,
+                    wie du dich für die legendäre Uniliga anmeldest.
+                    <br><br>
+                    Werde Teil unserer wachsenden Community, vernetze dich mit Mitspielern in deinem Kiez und bleibe
+                    über die nächsten Turniere informiert. Schnapp dir deinen Ball, wir sehen uns am Netz!
+                </p>
+            </div>
         </div>
-      </div>
     </section>
 
     <section class="courts">
-      <h2>Öffenltiche und Privatplätze</h2>
-      <div class="court-list">
-        <!-- Courts will be addes as a css grid -->
-        <!-- 2 big sections, one for the free to use and one or the commercial ones -->
-      </div>
-    </section>
+    <h2>Beliebte öffentliche Plätze</h2>
+        <div class="court-grid">
+
+            <div class="court-card">
+                <img src="pics/beachmitte.jpg" alt="BeachMitte">
+                <div class="court-info">
+                    <h3>BeachMitte</h3>
+                    <p> Mitte | Privat</p>
+                </div>
+            </div>
+            <div class="court-card">
+                <img src="pics/beachmitte.jpg" alt="BeachMitte">
+                <div class="court-info">
+                    <h3>BeachMitte</h3>
+                    <p> Mitte | Privat</p>
+                </div>
+            </div>
+            <div class="court-card">
+                <img src="pics/beachmitte.jpg" alt="BeachMitte">
+                <div class="court-info">
+                    <h3>BeachMitte</h3>
+                    <p> Mitte | Privat</p>
+                </div>
+            </div>
+
+
+        </div>
+</section>
 
     <section class="uni-sport">
-      <h2>Uni-Sport Beachvolleyball</h2>
-      <p>
-        Finde heraus, welche Universitäten in Berlin Beachvolleyball anbieten
-        und wie du teilnehmen kannst.
-      </p>
-      <!-- Wo und wie kann ich mich anmelden? -->
-      <!-- table with information -->
+        <h2>Uni-Sport Beachvolleyball</h2>
+        <p>
+            Finde heraus, welche Universitäten in Berlin Beachvolleyball anbieten
+            und wie du teilnehmen kannst.
+        </p>
+        <!-- Wo und wie kann ich mich anmelden? -->
+        <!-- table with information -->
     </section>
 
     <section class="uniliga">
-      <h2>Uniliga Beachvolleyball</h2>
-      <p>
-        Entdecke die Uniliga und finde heraus, wie du in die Liga einsteigen
-        kannst.
-      </p>
+        <h2>Uniliga Beachvolleyball</h2>
+        <p>
+            Entdecke die Uniliga und finde heraus, wie du in die Liga einsteigen
+            kannst.
+        </p>
     </section>
-  </body>
+</body>
+
 </html>

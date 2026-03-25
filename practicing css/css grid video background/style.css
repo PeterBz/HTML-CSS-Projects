@@ -8,11 +8,11 @@ header{
     height: 100vh; /* Makes the header take up the full viewport height */
     display: grid; /* Uses CSS Grid to position the content */
     grid-template-areas: "stack";
-    place-items: center;
+    place-items: center; /* Centers the content both horizontally and vertically */
 }
 
 header video {
-    grid-area: stack; /* Places the content in the same grid area as the video */
+        grid-area: stack; /* Places the content in the same grid area as the video */
 
     width: 100%; /* Makes the video take up the full width of the page */
     height: 100%; /* Makes the video take up the full height of the page */
@@ -25,7 +25,7 @@ header .content{
     font-family: Arial, sans-serif;
     z-index:1;
     color: white;
-    width: min(30rem,100%); /* Sets a maximum width for the content and allows it to shrink on smaller screens */
+    width: 100%;
     padding: 2rem;
 }
 
