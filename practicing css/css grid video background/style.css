@@ -12,7 +12,7 @@ header{
 }
 
 header video {
-        grid-area: stack; /* Places the content in the same grid area as the video */
+    grid-area: stack; /* Places the content in the same grid area as the video */
 
     width: 100%; /* Makes the video take up the full width of the page */
     height: 100%; /* Makes the video take up the full height of the page */
