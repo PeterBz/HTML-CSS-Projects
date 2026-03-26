@@ -11,31 +11,36 @@
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
 
-        <!-- Loads an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Loads an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTKC6SXb8erYAgt8DVJxFhWIGZjry5tC8&libraries=maps,marker&v=weekly&loading=async"
+    defer
+></script>
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="logo">Beach<span>Berlin</span></div>
+    <header class="main-header">
+        <div class="logo">Beach<span>Berlin</span></div>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-    <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-    </label>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
 
-    <nav class="nav-container">
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#spots">Plätze</a></li>
-            <li><a href="#uni">Uni-Sport</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#turniere">Turniere</a></li>
-            <li><a href="#faq" class="btn-faq">FAQ</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#spots">Plätze</a></li>
+                <li><a href="#uni">Uni-Sport</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#turniere">Turniere</a></li>
+                <li><a href="#faq" class="btn-faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="headline">
         <img src="pics/corey-agopian-5y4ljzRrDFA-unsplash.jpg" alt="Palmen im Sonnenuntergang" />
@@ -67,24 +72,11 @@
     </section>
 
     <section class="courts">
-    <h2>Beliebte öffentliche Plätze</h2>
+        <h2>Beliebte private Plätze</h2>
         <div class="court-grid">
 
             <div class="court-card">
-                <img src="pics/beachmitte.jpg" alt="BeachMitte">
-                <div class="court-info">
-                    <h3>BeachMitte</h3>
-                    <p> Mitte | Privat</p>
-                </div>
-            </div>
-            <div class="court-card">
-                <img src="pics/beachmitte.jpg" alt="BeachMitte">
-                <div class="court-info">
-                    <h3>BeachMitte</h3>
-                    <p> Mitte | Privat</p>
-                </div>
-            </div>
-            <div class="court-card">
+                <div class="court-number">1</div>
                 <img src="pics/beachmitte.jpg" alt="BeachMitte">
                 <div class="court-info">
                     <h3>BeachMitte</h3>
@@ -92,9 +84,63 @@
                 </div>
             </div>
 
+    <div class="court-card">
+        <div class="court-number">2</div>
+        <img src="pics/beach61.png" alt="Beach61">
+        <div class="court-info">
+            <h3>Beach61</h3>
+            <p>Gleisdreieck | Privat (Outdoor)</p>
+        </div>
+    </div>
+
+    <div class="court-card">
+        <div class="court-number">3</div>
+        <img src="pics/east61.png" alt="East61">
+        <div class="court-info">
+            <h3>East61</h3>
+            <p>Schöneberg | Privat (Indoor & Outdoor)</p>
+        </div>
+    </div>
+
+    <div class="court-card">
+        <div class="court-number">4</div>
+        <img src="pics/Are85.png" alt="Area 85">
+        <div class="court-info">
+            <h3>Area 85</h3>
+            <p>Oberschöneweide | Privat (Indoor & Outdoor)</p>
+        </div>
+    </div>
+
+    <div class="court-card">
+        <div class="court-number">5</div>
+        <img src="pics/beachzone.png" alt="BeachZone">
+        <div class="court-info">
+            <h3>BeachZone</h3>
+            <p>Lichtenberg | Privat (Outdoor)</p>
+        </div>
+    </div>
+
+</div>
 
         </div>
+    </section>
+
+
+    <section class="map-section">
+    <h2>Beach-Spots in Berlin</h2>
+    <gmp-map 
+        id="beach-map"
+        center="52.5200, 13.4050" 
+        zoom="11" 
+        map-id="DEMO_MAP_ID">
+        
+        <gmp-advanced-marker position="52.5323, 13.3846" title="BeachMitte">
+        </gmp-advanced-marker>
+        <gmp-advanced-marker position="52.5323,13.3846" title="BeachMitte"></gmp-advanced-marker>
+        
+    </gmp-map>
 </section>
+
 
     <section class="uni-sport">
         <h2>Uni-Sport Beachvolleyball</h2>
