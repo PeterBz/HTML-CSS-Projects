@@ -40,17 +40,16 @@
     </header>
 
     <input type="checkbox" id="wetter-toggle" aria-hidden="true" />
-    <label for="wetter-toggle" class="wetter-btn" role="button" aria-label="Wetter nazeigen">
-        <span class="wetter-open">☀️ Wetter heute</span>
-        <span class="wetter-closed">✕ Schließen</span>
-    </label>
+<label for="wetter-toggle" class="wetter-btn" role="button" aria-label="Wetter anzeigen">
+    <span class="wetter-open">☀️ Wetter heute</span>
+    <span class="wetter-close">✕ Schließen</span>
+</label>
 
-    <div class="wetter-popup" role="dialog" aria-label="Wetter Berlin">
-        <div class="wetter-header">
-            <div>
-                <div class="wetter-city">Berlin, DE</div>
-                <div class="wetter-date">Heute · Prognose</div>
-            </div>
+<div class="wetter-popup" role="dialog" aria-label="Wetter Berlin">
+    <div class="wetter-header">
+        <div>
+            <div class="wetter-city">Berlin, DE</div>
+            <div class="wetter-date">Heute · Prognose</div>
         </div>
     </div>
 
@@ -58,47 +57,39 @@
         <div class="wetter-icon">⛅</div>
         <div>
             <div class="wetter-temp">23<sup>°C</sup></div>
-            <div class="wetter-desc">Teilweise bewölkt</div>
+            <div class="wetter-desc">Teils bewölkt</div>
         </div>
-
-        <div class="wetter-grid">
-
-            <div class="wetter-detail">
-            <div class="wetter-detail-label">Wind</div>
-            <div class="wetter-detail-value">12 km/h</div>
-            </div>
-
-            <div class="wetter-detail">
-            <div class="wetter-detail-label">Feuchte</div>
-            <div class="wetter-detail-value">54%</div>
-            </div>
-
-            <div class="wetter-detail">
-            <div class="wetter-detail-label">UV-Index</div>
-            <div class="wetter-detail-value">6 · Hoch</div>
-            </div>
-
-            <div class="wetter-detail">
-            <div class="wetter-detail-label">Regen</div>
-            <div class="wetter-detail-value">10%</div>
-            </div>
-
-        </div>
-
-
-        <div class="beach-rating">
-            <div>
-                <div class="ratig-label">Beach Rating</div>
-                <div class="rating-stars">★★★★☆</div>
-            </div>
-            <div style="font-size:1.8rem"🏐></div>
-        </div>
-
-            <p class="wetter-note">⚠️ Layout-Beispiel: Echte Daten benötigen JavaScript, kann ich NOCH nciht</p>
-
     </div>
 
+    <div class="wetter-grid">
+        <div class="wetter-detail">
+            <div class="wetter-detail-label">Wind</div>
+            <div class="wetter-detail-val">12 km/h</div>
+        </div>
+        <div class="wetter-detail">
+            <div class="wetter-detail-label">Feuchte</div>
+            <div class="wetter-detail-val">54%</div>
+        </div>
+        <div class="wetter-detail">
+            <div class="wetter-detail-label">UV-Index</div>
+            <div class="wetter-detail-val">6 · Hoch</div>
+        </div>
+        <div class="wetter-detail">
+            <div class="wetter-detail-label">Regen</div>
+            <div class="wetter-detail-val">10%</div>
+        </div>
+    </div>
 
+    <div class="wetter-beach-rating">
+        <div>
+            <div class="rating-label">Beach-Rating</div>
+            <div class="rating-stars">★★★★☆</div>
+        </div>
+        <div style="font-size:1.8rem">🏐</div>
+    </div>
+
+    <p class="wetter-note">⚠️ Layout-Beispiel: Echte Daten benötigen JavaScript.</p>
+</div>
 
     <section class="headline">
         <img src="pics/corey-agopian-5y4ljzRrDFA-unsplash.jpg" alt="Palmen im Sonnenuntergang" />

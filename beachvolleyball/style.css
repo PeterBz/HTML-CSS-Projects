@@ -35,6 +35,16 @@
   --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);     /* Standard-Schatten für Karten */
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.2);    /* Starker Schatten für Hover-Effekte */
   --shadow-header: 0 2px 10px rgba(0, 0, 0, 0.1); /* Spezieller, flacher Header-Schatten */
+  --font-display: var(--font-heading);
+  --white: #ffffff;
+  --muted: rgba(255, 255, 255, 0.72);
+  --sky: #74b9ff;
+  --sand: #e9c46a;
+  --r-lg: var(--radius-md);
+  --r-sm: var(--radius-sm);
+  --r-pill: var(--radius-pill);
+  --sh2: var(--shadow-lg);
+  --ease: var(--transition-normal);
 
   /* --- Animationen (Transitions) --- */
   --transition-fast: 0.2s ease;
@@ -404,20 +414,115 @@ h2{
     transition: var(--transition-fast);
 }
 
+
 /* ============================================================
    WETTER POPUP
    ============================================================ */
+#wetter-toggle { display: none; }
 
-#wetter-toggle{
-    display: none;
-}
-
-.wetter-btn{
+.wetter-btn {
     position: fixed;
-    bottom: 25px; /* Evtl. var(--space-lg) + 5px */
-    right: 25px;
-    z-index: 100px; /* Achtung: px bei z-index ist ungültig, sollte nur 100 sein. Ich lasse es vorerst wie in deiner Vorlage. */
-    background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-hover)); /* Platzhalter-Verlauf hinzugefügt, da leer */
-    padding: var(--space-sm);
-    border-radius: var(--radius-pill);
+    bottom: 28px;
+    right: 28px;
+    z-index: 800;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: white;
+    border-radius: var(--r-pill);
+    padding: 12px 20px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(9,132,227,0.5);
+    cursor: pointer;
+    user-select: none;
+    transition: transform var(--ease), box-shadow var(--ease);
+    border: none;
+    border-radius: var(--r-sm);
 }
+
+.wetter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(9,132,227,0.6);
+}
+
+.wetter-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 28px;
+    z-index: 799;
+    width: 300px;
+    background: linear-gradient(160deg, #1a2a4a, #0d2137);
+    border: 1px solid rgba(116,185,255,0.3);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    box-shadow: var(--sh2);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+    transition: opacity var(--ease), transform var(--ease);
+    transform-origin: bottom right;
+    color: var(--white);
+}
+
+#wetter-toggle:checked ~ .wetter-popup {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+#wetter-toggle:checked ~ .wetter-btn .wetter-open  { display: none; }
+#wetter-toggle:checked ~ .wetter-btn .wetter-close { display: inline; }
+.wetter-close { display: none; }
+
+.wetter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.wetter-city {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(116,185,255,0.8);
+}
+
+.wetter-date { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+.wetter-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.wetter-icon { font-size: 3.5rem; line-height: 1; }
+.wetter-temp { font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: var(--white); line-height: 1; }
+.wetter-temp sup { font-size: 1.4rem; font-weight: 400; }
+.wetter-desc { font-size: 0.9rem; color: var(--muted); margin-top: 2px; }
+
+.wetter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.wetter-detail { background: rgba(255,255,255,0.05); border-radius: var(--r-sm); padding: 12px; }
+.wetter-detail-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 4px; }
+.wetter-detail-val { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--sky); }
+.wetter-note { margin-top: 16px; font-size: 0.72rem; color: var(--muted); text-align: center; font-style: italic; }
+
+.wetter-beach-rating {
+    margin-top: 16px;
+    background: rgba(233,196,106,0.1);
+    border: 1px solid rgba(233,196,106,0.25);
+    border-radius: var(--r-sm);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.wetter-beach-rating .rating-label { font-size: 0.75rem; font-weight: 500; color: var(--sand); }
+.rating-stars { color: var(--sand); font-size: 1rem; letter-spacing: 2px; }
+
